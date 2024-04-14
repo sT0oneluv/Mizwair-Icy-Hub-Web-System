@@ -1,0 +1,659 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400&display=swap');
+
+:root {
+   --verdigris: #5E5E4A;
+   --metal: #474737;
+   --blue: #2980b9;
+   --red: tomato;
+   --orange: orange;
+   --black: #333;
+   --white: #fff;
+   --bg-color: #eee;
+   --dark-bg: rgba(0, 0, 0, .7);
+   --box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .1);
+   --border: .1rem solid #999;
+}
+
+* {
+   font-family: 'Poppins', sans-serif;
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+   outline: none;
+   border: none;
+   text-decoration: none;
+}
+
+html {
+   font-size: 62.5%;
+   overflow-x: hidden;
+}
+
+.container {
+   max-width: 1200px;
+   margin: 0 auto;
+   /* padding-bottom: 5rem; */
+}
+
+section {
+   padding: 2rem;
+}
+
+/* heading for each pages */
+.heading {
+   text-align: center;
+   font-size: 3.5rem;
+   text-transform: uppercase;
+   color: var(--black);
+   margin-bottom: 2rem;
+}
+
+/* button style*/
+.btn,
+.option-btn,
+.delete-btn {
+   display: block;
+   width: 100%;
+   text-align: center;
+   background-color: var(--verdigris);
+   color: var(--white);
+   font-size: 1.7rem;
+   padding: 1.2rem 3rem;
+   border-radius: .5rem;
+   cursor: pointer;
+   margin-top: 1rem;
+}
+
+.btn:hover,
+.option-btn:hover,
+.delete-btn:hover {
+   background-color: var(--black);
+}
+
+.option-btn i,
+.delete-btn i {
+   padding-right: .5rem;
+}
+
+.option-btn {
+   background-color: var(--verdigris);
+   /* color */
+}
+
+.delete-btn {
+   margin-top: 0;
+   background-color: var(--metal);
+}
+
+/* end button style*/
+
+.message {
+   position: sticky;
+   top: 0;
+   left: 0;
+   z-index: 10000;
+   border-radius: .5rem;
+   background-color: var(--white);
+   /* color */
+   padding: 1.5rem 2rem;
+   margin: 0 auto;
+   max-width: 1200px;
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+   gap: 1.5rem;
+}
+
+.message span {
+   font-size: 2rem;
+   color: var(--black);
+}
+
+.message i {
+   font-size: 2.5rem;
+   color: var(--black);
+   cursor: pointer;
+}
+
+.message i:hover {
+   color: var(--red);
+}
+
+.header {
+   background-color: var(--metal);
+   /*change color*/
+   position: sticky;
+   top: 0;
+   left: 0;
+   z-index: 1000;
+}
+
+.header .flex {
+   display: flex;
+   align-items: center;
+   padding: 1.5rem 2rem;
+   max-width: 1200px;
+   margin: 0 auto;
+}
+
+.header .flex .logo {
+   margin-right: auto;
+   font-size: 2.5rem;
+   color: var(--white);
+}
+
+.header .flex .navbar a {
+   margin-left: 2rem;
+   font-size: 2rem;
+   color: var(--white);
+}
+
+.header .flex .navbar a:hover {
+   color: var(--greenWhite);
+}
+
+#menu-btn {
+   margin-left: 2rem;
+   font-size: 3rem;
+   cursor: pointer;
+   color: var(--white);
+   display: none;
+}
+
+/* Search form */
+.search-form {
+   display: flex;
+   align-items: center;
+   max-width: 30rem;
+   /* Adjust width as needed */
+   margin: 0 auto;
+   margin-top: 5rem;
+}
+
+.search-form .box {
+   flex: 1;
+   padding: 1.2rem 1.4rem;
+   font-size: 1.7rem;
+   color: var(--black);
+   border-radius: .5rem;
+   background-color: var(--white);
+}
+
+.search-form .btn {
+   background-color: var(--verdigris);
+   color: var(--white);
+   font-size: 1.7rem;
+   padding: 1.2rem 1.4rem;
+   border-radius: .5rem;
+   cursor: pointer;
+   margin-left: 1rem;
+   margin-top: 0;
+}
+
+/* product form */
+.add-product-form {
+   max-width: 50rem;
+   background-color: var(--bg-color);
+   border-radius: .5rem;
+   padding: 2rem;
+   margin: 0 auto;
+   margin-top: 2rem;
+}
+
+.add-product-form h3 {
+   font-size: 2.5rem;
+   margin-bottom: 1rem;
+   color: var(--black);
+   text-transform: uppercase;
+   text-align: center;
+}
+
+.add-product-form .box {
+   text-transform: none;
+   padding: 1.2rem 1.4rem;
+   font-size: 1.7rem;
+   color: var(--black);
+   border-radius: .5rem;
+   background-color: var(--white);
+   /* color */
+   margin: 1rem 0;
+   width: 100%;
+}
+
+/* table display under the add product form */
+.display-product-table table {
+   width: 100%;
+   text-align: center;
+}
+
+.display-product-table table thead th {
+   padding: 1.5rem;
+   font-size: 1.5rem;
+   background-color: var(--black);
+   color: var(--white);
+}
+
+.display-product-table table td {
+   padding: 1.5rem;
+   font-size: 1.5rem;
+   color: var(--black);
+}
+
+.display-product-table table td:first-child {
+   padding: 0;
+}
+
+.display-product-table table tr:nth-child(even) {
+   background-color: var(--bg-color);
+   /* color in table; even count */
+}
+
+.display-product-table .empty {
+   margin-bottom: 2rem;
+   text-align: center;
+   background-color: var(--bg-color);
+   color: var(--black);
+   font-size: 1.5rem;
+   padding: 1.5rem;
+}
+
+/* create like a pop up edit product */
+.edit-form-container {
+   position: fixed;
+   top: 0;
+   left: 0;
+   z-index: 1100;
+   background-color: var(--dark-bg);
+   padding: 2rem;
+   display: none;
+   align-items: center;
+   justify-content: center;
+   min-height: 100vh;
+   width: 100%;
+}
+
+.edit-form-container form {
+   width: 40rem;
+   border-radius: .5rem;
+   background-color: var(--white);
+   text-align: center;
+   padding: 1rem;
+}
+
+.edit-form-container form .box {
+   width: 100%;
+   background-color: var(--bg-color);
+   border-radius: .5rem;
+   margin: 0.5rem 0;
+   font-size: 1.5rem;
+   color: var(--black);
+   padding: 1.2rem 1.4rem;
+   text-transform: none;
+}
+
+/* in the produtcs page */
+.products .box-container {
+   display: grid;
+   grid-template-columns: repeat(auto-fit, 35rem);
+   gap: 1.5rem;
+   justify-content: center;
+}
+
+.products .box-container .box {
+   text-align: center;
+   padding: 2rem;
+   box-shadow: var(--box-shadow);
+   border: var(--border);
+   border-radius: .5rem;
+   background-color: var(--white);
+}
+
+.products .box-container .box img {
+   height: 25rem;
+}
+
+.products .box-container .box h3 {
+   margin: 1rem 0;
+   font-size: 2.5rem;
+   color: var(--black);
+}
+
+.products .box-container .box .price {
+   font-size: 2.5rem;
+   color: var(--black);
+}
+
+/* order form */
+.order-message-container {
+   position: fixed;
+   top: 0;
+   left: 0;
+   height: 100vh;
+   overflow-y: scroll;
+   overflow-x: hidden;
+   padding: 2rem;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   z-index: 1100;
+   background-color: var(--dark-bg);
+   width: 100%;
+}
+
+.order-message-container::-webkit-scrollbar {
+   width: 1rem;
+}
+
+.order-message-container::-webkit-scrollbar-track {
+   background-color: var(--dark-bg);
+}
+
+.order-message-container::-webkit-scrollbar-thumb {
+   background-color: var(--metal);
+}
+
+.order-message-container .message-container {
+   width: 50rem;
+   background-color: var(--white);
+   border-radius: .5rem;
+   padding: 2rem;
+   text-align: center;
+}
+
+.order-message-container .message-container h3 {
+   font-size: 2.5rem;
+   color: var(--black);
+}
+
+.order-message-container .message-container .order-detail {
+   background-color: var(--bg-color);
+   border-radius: .5rem;
+   padding: 1rem;
+   margin: 1rem 0;
+}
+
+.order-message-container .message-container .order-detail span {
+   background-color: var(--white);
+   border-radius: .5rem;
+   color: var(--black);
+   font-size: 2rem;
+   display: inline-block;
+   padding: 1rem 1.5rem;
+   margin: 1rem;
+}
+
+.order-message-container .message-container .order-detail span.total {
+   display: block;
+   background: var(--red);
+   color: var(--white);
+}
+
+.order-message-container .message-container .customer-details {
+   margin: 1.5rem 0;
+}
+
+.order-message-container .message-container .customer-details p {
+   padding: 1rem 0;
+   font-size: 2rem;
+   color: var(--black);
+}
+
+.order-message-container .message-container .customer-details p span {
+   color: var(--blue);
+   padding: 0 .5rem;
+   text-transform: none;
+}
+
+/* order details table */
+.order-details table,
+.message-details table {
+   text-align: center;
+   width: 100%;
+}
+
+.order-details table thead th,
+.message-details table thead th {
+   padding: 1.5rem;
+   font-size: 1.5rem;
+   color: var(--white);
+   background-color: var(--black);
+   /* color of first row */
+}
+
+.order-details table tr td,
+.message-details table tr td {
+   border-bottom: var(--border);
+   padding: 1.5rem;
+   font-size: 1.5rem;
+   color: var(--black);
+}
+
+.order-details table input[type="number"],
+.message-details table input[type="number"] {
+   border: var(--border);
+   padding: 1rem 2rem;
+   font-size: 1.5rem;
+   color: var(--black);
+   width: 10rem;
+}
+
+/* Modal styles */
+.modal {
+   display: none;
+   /* Hidden by default */
+   position: fixed;
+   /* Stay in place */
+   z-index: 1;
+   /* Sit on top */
+   left: 0;
+   top: 0;
+   width: 100%;
+   /* Full width */
+   height: 100%;
+   /* Full height */
+   overflow: auto;
+   /* Enable scroll if needed */
+   background-color: rgb(0, 0, 0);
+   /* Fallback color */
+   background-color: rgba(0, 0, 0, 0.4);
+   /* Black w/ opacity */
+   padding-top: 60px;
+}
+
+/* Modal content */
+.modal-content {
+   background-color: #fefefe;
+   margin: 5% auto;
+   padding: 20px;
+   border: 1px solid #888;
+   width: 80%;
+   /*overflow: hidden;*/
+   text-align: center;
+}
+
+/* Close button */
+.close {
+   color: #aaa;
+   float: right;
+   font-size: 28px;
+   font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+   color: black;
+   text-decoration: none;
+   cursor: pointer;
+}
+
+/* Modal styles */
+/* Add styles for order details table */
+.order-details-table {
+   margin-top: 2rem;
+}
+
+.order-details {
+   width: 100%;
+   border-collapse: collapse;
+}
+
+.order-details th,
+.order-details td {
+   padding: 1.2rem;
+   font-size: 1.5rem;
+   color: var(--black);
+}
+
+.order-details th {
+   background-color: var(--black);
+   color: var(--white);
+}
+
+.order-details td {
+   border: 1px solid var(--border);
+   text-align: left;
+}
+
+.order-details img .payment-proof {
+   max-width: 30%;
+   height: auto;
+   margin: 0 auto;
+   /* Center image */
+}
+
+/* Admin Manual */
+.container-manual {
+   width: 100%;
+   min-height: 100vh;
+   padding: 2rem; /* Add padding for spacing */
+}
+
+.container-manual h1 {
+   text-align: center;
+   padding-bottom: 2%;
+   text-transform: uppercase;
+   font-size: 3rem;
+}
+
+.container-manual .content-section {
+   width: 100%;
+   display: block;
+   margin: auto;
+   padding: 2rem;
+}
+
+.container-manual .content-section p {
+   padding-bottom: 4%;
+   text-align: center;
+   font-size: 2rem;
+}
+
+.container-manual .section {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+
+.container-manual .section h3 {
+   text-align: center;
+   margin-bottom: 3%;
+   font-size: 2.5rem;
+}
+
+.container-manual .section #video {
+   width: 75%;
+   height: auto;
+}
+
+
+
+/* media queries  */
+
+@media (max-width:1200px) {
+
+   .shopping-cart {
+      overflow-x: scroll;
+   }
+
+   .shopping-cart table {
+      width: 120rem;
+   }
+
+   .shopping-cart .heading {
+      text-align: left;
+   }
+
+   .shopping-cart .checkout-btn {
+      text-align: left;
+   }
+
+}
+
+@media (max-width:991px) {
+
+   html {
+      font-size: 55%;
+   }
+
+}
+
+@media (max-width:768px) {
+
+   #menu-btn {
+      display: inline-block;
+      transition: .2s linear;
+   }
+
+   #menu-btn.fa-times {
+      transform: rotate(180deg);
+   }
+
+   .header .flex .navbar {
+      position: absolute;
+      top: 99%;
+      left: 0;
+      right: 0;
+      background-color: var(--metal);
+      clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+      transition: .2s linear;
+   }
+
+   .header .flex .navbar.active {
+      clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+   }
+
+   .header .flex .navbar a {
+      margin: 2rem;
+      display: block;
+      text-align: center;
+      font-size: 2.5rem;
+   }
+
+   .display-product-table {
+      overflow-x: scroll;
+   }
+
+   .display-product-table table {
+      width: 90rem;
+   }
+
+}
+
+@media (max-width:450px) {
+
+   html {
+      font-size: 50%;
+   }
+
+   .heading {
+      font-size: 3rem;
+
+   }
+
+   .products .box-container {
+      grid-template-columns: 1fr;
+   }
+
+
+
+}

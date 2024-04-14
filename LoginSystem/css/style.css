@@ -1,0 +1,160 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&display=swap');
+
+* {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-decoration: none;
+}
+
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -5;
+    background-image: url('../image/bisnes-aiskrim-malaysia.png');
+    background-size: cover;
+    filter: blur(15px); /* Adjust the blur value (in pixels) according to your preference */
+}
+
+body {
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.container {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    padding-bottom: 60px;
+}
+
+.container .content {
+    text-align: center;
+}
+
+.container .content h3 {
+    font-size: 30px;
+    color: #333;
+}
+
+.container .content h3 span {
+    background: #E8888A;
+    color: #fff;
+    border-radius: 5px;
+    padding: 0 15px;
+}
+
+.container .content h1 {
+    font-size: 20px;
+    color: #333;
+}
+
+.container .content h1 span {
+    color: black;
+}
+
+.container .content .btn {
+    display: inline-block;
+    padding: 10px 30px;
+    font-size: 20px;
+    background: #333;
+    color: #fff;
+    margin: 0 5px;
+    margin-top: 50px;
+    text-transform: capitalize;
+}
+
+.container .content .btn:hover {
+    background: #FFD1DC;
+}
+
+.form-container {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.form-container form {
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, .1);
+    background: #fff;
+    text-align: center;
+    width: 500px;
+}
+
+.form-container form h3 {
+    font-size: 30px;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.form-container form input {
+    width: 80%;
+    padding: 8px 15px;
+    font-size: 15px;
+    margin: 3px 0;
+    background: #eee;
+    border-radius: 5px;
+}
+
+.form-container form .address{
+    display: flex;
+    justify-content: space-between;
+}
+
+.form-container form .address input{
+    width: calc(50% - 5px);
+    margin-right: 10px;
+}
+
+.form-container form .form-btn {
+    background: #D7D7CB;
+    color: #474737;
+    text-transform: capitalize;
+    font-size: 17px;
+    cursor: pointer;
+}
+
+.form-container form .form-btn:hover {
+    background: #474737;
+    color: #fff;
+}
+
+.form-container form p {
+    margin-top: 10px;
+    font-size: 15px;
+    color: #333;
+}
+
+.form-container form p a {
+    color: #474737;
+    font-weight: bold;
+}
+
+.form-container form .error-msg {
+    margin: 10px 40px;
+    display: block;
+    background: crimson;
+    color: #fff;
+    border-radius: 5px;
+    font-size: 15px;
+    padding: 5px;
+}
